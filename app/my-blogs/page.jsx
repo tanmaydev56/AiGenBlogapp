@@ -2,9 +2,9 @@ import React from 'react'
 
 const MyBlogs = () => {
   return (
-    <section className="py-16 bg-gray-50 h-screen">
+    <section className="py-16  h-screen">
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-6">My Blogs</h2>
+      <h2 className="text-3xl font-bold text-center mb-6 text-white">My Blogs</h2>
       <div className="space-y-4">
         <div className="p-4 bg-white rounded shadow">
           <h3 className="font-bold text-lg">Blog Title</h3>
