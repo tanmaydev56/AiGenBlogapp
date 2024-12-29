@@ -2,7 +2,7 @@
 import React from 'react';
 
 const About = () => {
-  if (!process.env.CLERK_PUBLISHABLE_KEY) {
+  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY) {
     return <div>Error: Missing Clerk publishable key.</div>;
   }
 
