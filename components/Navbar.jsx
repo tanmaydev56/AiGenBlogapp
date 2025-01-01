@@ -48,7 +48,7 @@ const Navbar = () => {
     <nav
       className={`${
         isMenuOpen ? "block" : "hidden"
-      } absolute top-16 left-0 w-full ml-[330px] bg-gray-800 md:bg-transparent justify-between md:static md:flex md:items-center md:space-x-8`}
+      } absolute top-16 left-0 w-auto ml-[175px] bg-gray-800 md:bg-transparent justify-between md:static md:flex md:items-center md:space-x-8`}
     >
       <div className="flex flex-col md:flex-row md:space-x-8 items-center w-full md:w-auto">
         <a href="/" className="block py-2 px-4 hover:text-gray-300">
@@ -65,7 +65,7 @@ const Navbar = () => {
         </a>
       </div>
       {/* User Profile Button */}
-      <div className="py-2 px-4 md:py-0">
+      <div className="py-2 px-14 md:py-0">
         <UserButton />
       </div>
     </nav>
