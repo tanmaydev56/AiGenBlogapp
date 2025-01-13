@@ -79,12 +79,12 @@ const Generate = () => {
           <input
             type="text"
             placeholder="Enter a topic..."
-            className="w-full px-4 py-2 border rounded"
+            className="w-full text-black px-4 py-2 border rounded"
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
           />
           <select
-            className="w-full px-4 py-2 border rounded"
+            className="w-full text-black px-4 py-2 border rounded"
             value={style}
             onChange={(e) => setStyle(e.target.value)}
           >
@@ -103,7 +103,7 @@ const Generate = () => {
         </div>
 
         <div className="mt-3 p-4 bg-gray-100 rounded">
-          <h3 className="text-xl font-bold">Blog Preview</h3>
+          <h3 className="text-xl text-black font-bold">Blog Preview</h3>
           <div className="mt-2 text-gray-700">
             {blogContent ? (
               <div>
