@@ -40,14 +40,32 @@ const Generate = () => {
         generationConfig,
         history: [],
       });
+  
       const result = await chatSession.sendMessage(`Topic: ${topic}, Style: ${style}`);
-      setBlogContent(result.response.text());
+      const generatedContent = result.response.text();
+  
+      // Get the current date and time
+      const createdAt = new Date().toISOString();
+  
+      // Update state with the generated content
+      setBlogContent(generatedContent);
+  
+      // Push the generated content to Appwrite database
+      await databases.createDocument(databaseId, collectionId, "unique()", {
+        title: topic, // Assuming "title" corresponds to the topic
+        content: generatedContent,
+        style,
+        createdAt,
+      });
+  
+      console.log("Blog successfully saved to Appwrite!");
     } catch (error) {
-      console.error("Error generating blog:", error);
+      console.error("Error generating or saving blog:", error);
     } finally {
       setLoading(false);
     }
   };
+  
 
   const toggleContent = () => {
     setIsTruncated(!isTruncated);
